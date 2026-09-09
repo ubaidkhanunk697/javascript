@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        background: linear-gradient(to left, rgb(0, 0, 0), rgb(4, 4, 126));
+      }
+      #cont {
+        border: 1px solid white;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        gap: 20px;
+        background-color: #ffffff99;
+        border-radius: 12px;
+        backdrop-filter: blur(5px);
+      }
+      #container {
+        background-color: #0000006d;
+        backdrop-filter: blur(5px);
+        width: 200px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding: 10px;
+        border-radius: 20px;
+        color: #fff;
+        letter-spacing: 3px;
+        font-size: 22x;
+        font-weight: 600;
+      }
+
+      #btn {
+        border: none;
+        outline: none;
+        height: 30px;
+        font-size: 19px;
+        color: white;
+        background-color: rgb(75, 143, 7);
+        border-radius: 20px;
+        transition: all 0.3s ease-in-out;
+      }
+      #btn:hover {
+        background-color: rgb(101, 194, 8);
+      }
+      #btn:active {
+        transform: scale(0.96);
+      }
+      .btn {
+        border: none;
+        outline: none;
+        height: 30px;
+        font-size: 19px;
+        color: white;
+        background-color: rgb(132, 6, 6);
+        border-radius: 20px;
+        transition: all 0.3s ease-in-out;
+        width: 90px;
+      }
+      .btn:hover {
+        background-color: rgb(194, 8, 8);
+      }
+      .btn:active {
+        transform: scale(0.96);
+      }
+      .buttons {
+        display: flex;
+        justify-content: space-around;
+      }
+      .dark {
+        border: 1px solid white;
+        color: #fff;
+        width: 200px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        font-size: 22px;
+        letter-spacing: 3px;
+        font-weight: 600;
+        padding: 10px;
+        border-radius: 20px;
+        background-color: rgb(255, 0, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cont">
+      <div id="container"></div>
+      <input type="submit" id="btn" value="Password" />
+      <div class="buttons">
+        <button class="btn" id="remove">Remove</button>
+        <button class="btn" id="save">Save</button>
+      </div>
+    </div>
+    <div id="password"></div>
+    <script src="./string.js"></script>
+  </body>
+</html>

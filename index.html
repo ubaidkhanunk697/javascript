@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("./background.avif");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .login {
+        border: 2px solid transparent;
+        width: 25%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: #fefefc5d;
+        backdrop-filter: blur(1px);
+        -webkit-backdrop-filter: blur(1px);
+        border-radius: 12px;
+        box-shadow:
+          1px 1px 10px -1px #fff,
+          -1px -1px 10px -1px #000;
+        border-right: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+      }
+      .login form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* border: 1px solid black; */
+        height: 200px;
+      }
+      .login h1 {
+        font-family:
+          "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 45px;
+        text-align: center;
+        color: #0f2b02;
+      }
+      .login .email {
+        /* border: 1px solid black; */
+        height: 50px;
+        margin: 3px;
+      }
+      .login .email input {
+        margin-left: 3px;
+        width: 305px;
+        height: 35px;
+        border-radius: 8px;
+        border: 1px solid #3d3c3c;
+        padding: 10px;
+        outline: none;
+      }
+      .login .email input:focus {
+        border: 2px solid #225306;
+      }
+      .login .password {
+        /* border: 1px solid black; */
+        height: 50px;
+        margin: 3px;
+      }
+      .login .password input {
+        margin-left: 3px;
+        width: 305px;
+        height: 35px;
+        border-radius: 8px;
+        border: 1px solid #3d3c3c;
+        padding: 10px;
+        outline: none;
+      }
+      .login .password input:focus {
+        border: 2px solid #225306;
+      }
+      .login .checkbox {
+        /* border: 1px solid black; */
+        height: 30px;
+        margin: 3px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .login .checkbox div {
+        padding-left: 5px;
+      }
+      .login .checkbox a {
+        text-decoration: none;
+        color: blue;
+        padding-right: 4px;
+      }
+      .login span {
+        padding-left: 5px;
+      }
+      .btn {
+        margin: 3px;
+        height: 35px;
+        border-radius: 12px;
+        border: none;
+        outline: none;
+        background: linear-gradient(to right, #1b5e06, #081703);
+        font-family:
+          "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 1.5px;
+        transition: all 0.3s ease-in-out;
+      }
+      .btn:hover {
+        transform: translateY(-1.8px);
+      }
+      .btn:active {
+        transform: scale(0.96);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login">
+      <h1>Login</h1>
+      <form>
+        <div class="email">
+          <label for="email">Email:</label><br />
+          <input
+            type="text"
+            placeholder="Enter your Name"
+            id="email"
+            name="email"
+          />
+        </div>
+        <div class="password">
+          <label for="password">Password</label><br />
+          <input
+            type="password"
+            placeholder="Enter your Password"
+            id="password"
+            name="password"
+          />
+        </div>
+        <div class="checkbox">
+          <div><input type="checkbox" /><span>Ramember</span></div>
+          <a href="#">Forget Password</a>
+        </div>
+        <button type="button" id="btn" class="btn">Logged In</button>
+      </form>
+    </div>
+    <!-- <script src="./shopping card.js"></script> -->
+  </body>
+</html>
