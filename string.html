@@ -3,18 +3,225 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    />
+    <title>Calculator</title>
     <style>
-      .style {
-        font-size: 25px;
-        font-weight: 600;
-        background-color: #b4b3b3;
-        text-align: center;
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(49, 49, 49);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #container {
+        border: 1px solid #fff;
+        width: 400px;
+        height: 500px;
+        background-color: #ffffff;
+        border-radius: 16px;
+        box-shadow: 1px 1px 10px -1px #fff;
+        gap: 5px;
+        display: grid;
+        grid-template-areas:
+          "space space space space"
+          "one two three four"
+          "five six seven eight"
+          "nine ten elevn twolive"
+          "thirteen fourteen fivteen sixteen"
+          "seventeen eighteen ninteen twenty";
+      }
+      .space {
+        grid-area: space;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        border-radius: 16px;
+        padding: 15px;
+        margin-bottom: 4px;
+        font-size: 22px;
+        font-weight: 900;
+        background-color: #ccc !important;
+        color: black !important;
+        box-shadow: 1px 1px 10px rgb(74, 74, 74);
+      }
+      .one {
+        grid-area: one;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .two {
+        grid-area: two;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .three {
+        grid-area: three;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .four {
+        grid-area: four;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .five {
+        grid-area: five;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .six {
+        grid-area: six;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .seven {
+        grid-area: seven;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .eight {
+        grid-area: eight;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .nine {
+        grid-area: nine;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .ten {
+        grid-area: ten;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .elevn {
+        grid-area: elevn;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .twolive {
+        grid-area: twolive;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .thirteen {
+        grid-area: thirteen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .fourteen {
+        grid-area: fourteen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .fivteen {
+        grid-area: fivteen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .sixteen {
+        grid-area: sixteen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .seventeen {
+        grid-area: seventeen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom-left-radius: 16px;
+      }
+      .eighteen {
+        grid-area: eighteen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .ninteen {
+        grid-area: ninteen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .twenty {
+        grid-area: twenty;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom-right-radius: 16px;
+      }
+      .item,
+      .space {
+        border-radius: 16px;
+        font-size: 20px;
+        font-weight: 700;
+        cursor: pointer;
+        background-color: #04aa6d;
+        color: #fff;
+        transition: all 0.3s ease-in-out;
+      }
+      .item:hover {
+        background-color: #1ace8c;
+        box-shadow: 1px 1px 10px #1ace8c;
+      }
+      .item:active {
+        transform: scale(0.9);
+      }
+      .same {
+        background-color: red;
+      }
+      .same:hover {
+        background-color: rgb(254, 17, 17);
+        box-shadow: 1px 1px 10px red;
       }
     </style>
   </head>
   <body>
-    <div id="container"></div>
-    <script src="./string.js"></script>
+    <div id="container">
+      <div class="space">0</div>
+      <div class="item one same">AC</div>
+      <div class="item two same">DEL</div>
+      <div class="item three same">%</div>
+      <div class="item four same">/</div>
+      <div class="item five">1</div>
+      <div class="item six">2</div>
+      <div class="item seven">3</div>
+      <div class="item eight same">X</div>
+      <div class="item nine">4</div>
+      <div class="item ten">5</div>
+      <div class="item elevn">6</div>
+      <div class="item twolive same">-</div>
+      <div class="item thirteen">7</div>
+      <div class="item fourteen">8</div>
+      <div class="item fivteen">9</div>
+      <div class="item sixteen same">+</div>
+      <div class="item seventeen same">+/-</div>
+      <div class="item eighteen">0</div>
+      <div class="item ninteen same">.</div>
+      <div class="item twenty same">=</div>
+    </div>
   </body>
 </html>
