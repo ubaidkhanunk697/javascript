@@ -108,69 +108,76 @@
 
 // console.log(fruits.join("|"));
 
-let fruits = ["Apple", "Banana", "Mango", "Orange", "Pineapple"];
-fruits.push("Watermelon");
-console.log(fruits);
-console.log(fruits.pop());
-fruits.unshift("Strawberry");
-console.log(fruits);
-console.log(fruits.shift());
-console.log(`The length of the whole array is ${fruits.length}`);
-console.log(fruits[0], fruits[fruits.length - 1]);
+// let fruits = ["Apple", "Banana", "Mango", "Orange", "Pineapple"];
+// fruits.push("Watermelon");
+// console.log(fruits);
+// console.log(fruits.pop());
+// fruits.unshift("Strawberry");
+// console.log(fruits);
+// console.log(fruits.shift());
+// console.log(`The length of the whole array is ${fruits.length}`);
+// console.log(fruits[0], fruits[fruits.length - 1]);
 
-fruits.splice(1, 1, "Grapas");
-console.log(fruits);
+// fruits.splice(1, 1, "Grapas");
+// console.log(fruits);
 
-let newFruits = fruits.forEach(function (fruits, index) {
-  console.log(`The index is ${index}, ${fruits}`);
-});
+// let newFruits = fruits.forEach(function (fruits, index) {
+//   console.log(`The index is ${index}, ${fruits}`);
+// });
 
-let mapFruits = fruits.map(function (fruits) {
-  console.log(fruits.toUpperCase());
-});
+// let mapFruits = fruits.map(function (fruits) {
+//   console.log(fruits.toUpperCase());
+// });
 
-let filterFruits = fruits.filter(function (fruits) {
-  return fruits.length > 5;
-});
-console.log(filterFruits);
+// let filterFruits = fruits.filter(function (fruits) {
+//   return fruits.length > 5;
+// });
+// console.log(filterFruits);
 
-let findFruits = fruits.find(function (fruits) {
-  return fruits.length > 6;
-});
-console.log(findFruits);
+// let findFruits = fruits.find(function (fruits) {
+//   return fruits.length > 6;
+// });
+// console.log(findFruits);
 
-console.log(fruits.includes("Mango"));
-console.log(fruits.indexOf("Orange"));
-console.log(fruits.sort());
+// console.log(fruits.includes("Mango"));
+// console.log(fruits.indexOf("Orange"));
+// console.log(fruits.sort());
 
-let numbers = [50, 10, 80, 30, 20];
-console.log(numbers.sort());
+// let numbers = [50, 10, 80, 30, 20];
+// console.log(numbers.sort());
 
-let descending = numbers.sort(function (a, b) {
-  return b - a;
-});
-console.log(descending);
+// let descending = numbers.sort(function (a, b) {
+//   return b - a;
+// });
+// console.log(descending);
 
-console.log(fruits.slice(1, 3));
+// console.log(fruits.slice(1, 3));
 
-fruits.splice(3, 1);
-console.log(fruits);
-fruits.splice(2, 0, "Kiwi");
-console.log(fruits);
-fruits.splice(fruits.indexOf("Mango"), 1, "Peach");
-console.log(fruits);
+// fruits.splice(3, 1);
+// console.log(fruits);
+// fruits.splice(2, 0, "Kiwi");
+// console.log(fruits);
+// fruits.splice(fruits.indexOf("Mango"), 1, "Peach");
+// console.log(fruits);
 
-console.log(fruits.join("|"));
+// console.log(fruits.join("|"));
 
-console.log(fruits.reverse());
+// console.log(fruits.reverse());
 
-let everyFruits = fruits.every(function (fruits) {
-  return fruits.length > 3;
-});
-console.log(everyFruits);
+// let everyFruits = fruits.every(function (fruits) {
+//   return fruits.length > 3;
+// });
+// console.log(everyFruits);
 
-let sameFruits = fruits.some(function (fruits) {
-  return fruits.length > 8;
-});
+// let sameFruits = fruits.some(function (fruits) {
+//   return fruits.length > 8;
+// });
 
-console.log(sameFruits);
+// console.log(sameFruits);
+
+let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"];
+console.log(companies.shift());
+companies.splice(companies.indexOf("Uber"), 1, "Ola");
+console.log(companies);
+companies.push("Amazon");
+console.log(companies);
