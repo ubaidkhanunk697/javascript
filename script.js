@@ -76,16 +76,101 @@
 // });
 
 // let number = [12, 23, 32, 1, 6, 9, 19, 44, 55, 34];
-// let filterNumber = number.find(function (number) {
+// let filterNumber = number.filter(function (number) {
 //   return number > 20;
 // });
 // console.log(filterNumber);
 // let number = [12, 21, 19, 18, 22, 43];
 // let numberFind = number.find(function (number) {
-//   return number < 20;
+//   return number > 20;
 // });
 // alert(numberFind);
 
-let fruits = ["Apple", "Banana", "Orange", "Pineapple"];
-console.log(fruits.includes("Apple"));
-console.log(fruits.includes("Watermelon"));
+// let fruits = ["Apple", "Banana", "Orange", "Pineapple"];
+// console.log(fruits.includes("Apple"));
+// console.log(fruits.includes("Watermelon"));
+
+// let fruits = ["Apple", "Banana", "Pineapple", "Orange"];
+
+// console.log(fruits.indexOf("Apple"));
+// console.log(fruits.indexOf("Orange"));
+// console.log(fruits.indexOf("Watermelon"));
+
+// let number = [50, 40, 30, 20, 10];
+
+// number.sort(function (a, b) {
+//   return b - a;
+// });
+// console.log(number);
+// let fruits = ["Apple", "Banana", "Pineapple"];
+
+// fruits.splice(fruits.indexOf("Pineapple"), 0, "Watermelon", "Mango");
+
+// console.log(fruits.join("|"));
+
+let fruits = ["Apple", "Banana", "Mango", "Orange", "Pineapple"];
+fruits.push("Watermelon");
+console.log(fruits);
+console.log(fruits.pop());
+fruits.unshift("Strawberry");
+console.log(fruits);
+console.log(fruits.shift());
+console.log(`The length of the whole array is ${fruits.length}`);
+console.log(fruits[0], fruits[fruits.length - 1]);
+
+fruits.splice(1, 1, "Grapas");
+console.log(fruits);
+
+let newFruits = fruits.forEach(function (fruits, index) {
+  console.log(`The index is ${index}, ${fruits}`);
+});
+
+let mapFruits = fruits.map(function (fruits) {
+  console.log(fruits.toUpperCase());
+});
+
+let filterFruits = fruits.filter(function (fruits) {
+  return fruits.length > 5;
+});
+console.log(filterFruits);
+
+let findFruits = fruits.find(function (fruits) {
+  return fruits.length > 6;
+});
+console.log(findFruits);
+
+console.log(fruits.includes("Mango"));
+console.log(fruits.indexOf("Orange"));
+console.log(fruits.sort());
+
+let numbers = [50, 10, 80, 30, 20];
+console.log(numbers.sort());
+
+let descending = numbers.sort(function (a, b) {
+  return b - a;
+});
+console.log(descending);
+
+console.log(fruits.slice(1, 3));
+
+fruits.splice(3, 1);
+console.log(fruits);
+fruits.splice(2, 0, "Kiwi");
+console.log(fruits);
+fruits.splice(fruits.indexOf("Mango"), 1, "Peach");
+console.log(fruits);
+
+console.log(fruits.join("|"));
+
+console.log(fruits.reverse());
+
+let everyFruits = fruits.every(function (fruits) {
+  return fruits.length > 3;
+});
+console.log(everyFruits);
+
+let sameFruits = fruits.some(function (fruits) {
+  return fruits.length > 8;
+});
+
+console.log(sameFruits);
