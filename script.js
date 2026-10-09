@@ -175,9 +175,125 @@
 
 // console.log(sameFruits);
 
-let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"];
-console.log(companies.shift());
-companies.splice(companies.indexOf("Uber"), 1, "Ola");
-console.log(companies);
-companies.push("Amazon");
-console.log(companies);
+// let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"];
+// console.log(companies.shift());
+// companies.splice(companies.indexOf("Uber"), 1, "Ola");
+// console.log(companies);
+// companies.push("Amazon");
+// console.log(companies);
+
+// let person = {
+//   fullName: "Muhammad",
+//   age: 23,
+//   city: "Peshawar",
+//   profession: "Engineer",
+// };
+// let property = "fullName";
+// console.log(person[property]);
+// person.email = "ubaidkhan@gmail.com";
+// person.experience = "One Year";
+// delete person.experience;
+// delete person.city;
+// person.salary = 190000;
+// console.log(person);
+
+// console.log(
+//   `The Name of the person is ${person.fullName}, Age is ${person.age}. He is blong to ${person.city} and the Profession is ${person.profession} Gmail account is ${person.email}, and experience is ${person.experience}`,
+// );
+
+// let person = {
+//   fullName: "Ubaid Ur Rahman",
+//   age: 21,
+//   profession: "AI Engineer",
+//   introduce: function () {
+//     console.log(
+//       `Hello! My Name is ${this.fullName}, and my profession is ${this.profession}`,
+//     );
+//   },
+// };
+// person.introduce();
+// let person = {
+//   fullName: "Ubaid Ur Rahman",
+//   age: 21,
+//   profession: "Web Developer",
+//   grees: function (name) {
+//     console.log(`Hello ${name}! my name is ${this.fullName}`);
+//   },
+// };
+// person.grees("Ali");
+// let person = {
+//   fullName: "Ubaid Ur Rahman",
+//   age: 21,
+//   profession: "Web Development",
+//   getIntroducion: function () {
+//     return `My name is ${this.fullName}, and my age is ${this.age}`;
+//   },
+// };
+// let introduction = person.getIntroducion();
+// console.log(introduction);
+
+// let person = {
+//   fullName: "Ubaid Ur Rahman",
+//   age: 21,
+//   profession: "Web Developer",
+//   salary: 50000,
+//   bouns: 10000,
+//   getPlus: function () {
+//     return this.salary + this.bouns;
+//   },
+// };
+
+// let salarys = person.getPlus();
+// console.log(salarys);
+
+// let person = {
+//   fullName: "Ubaid Ur Rahman",
+//   age: 21,
+//   profession: "Web development",
+//   increase: function () {
+//     this.age = this.age + 1;
+//   },
+// };
+
+// person.increase();
+
+// console.log(person.age);
+
+// person.increase();
+// console.log(person.age);
+
+// let person = {
+//   fullName: "Ubaid Ur Rahman",
+//   age: 21,
+//   increment: function (year) {
+//     this.age = this.age + year;
+//   },
+// };
+// person.increment(5);
+// console.log(person);
+
+// let salary = {
+//   fullName: "Ubaid Ur Rahman",
+//   age: 21,
+//   salary: 50000,
+//   increaseSalary: function (salary) {
+//     this.salary = this.salary + salary;
+//   },
+// };
+// salary.increaseSalary(10000);
+// console.log(salary);
+
+let bankAccount = {
+  owner: "Ubaid",
+  balance: 20000,
+  deposite: function (depos) {
+    this.balance = this.balance + depos;
+  },
+  withDraw: function (draw) {
+    this.balance = this.balance - draw;
+  },
+};
+bankAccount.deposite(10000);
+console.log(`Now the amount in your account is ${bankAccount.balance}`);
+bankAccount.withDraw(5000);
+console.log(`You with draw 5000 Rs now your balance is${bankAccount.balance}`);
