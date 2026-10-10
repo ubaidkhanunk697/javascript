@@ -283,17 +283,146 @@
 // salary.increaseSalary(10000);
 // console.log(salary);
 
+// let bankAccount = {
+//   owner: "Ubaid",
+//   balance: 20000,
+//   deposite: function (depos) {
+//     this.balance = this.balance + depos;
+//   },
+//   withDraw: function (draw) {
+//     this.balance = this.balance - draw;
+//   },
+// };
+// bankAccount.deposite(10000);
+// console.log(`Now the amount in your account is ${bankAccount.balance}`);
+// bankAccount.withDraw(5000);
+// console.log(`You with draw 5000 Rs now your balance is${bankAccount.balance}`);
+
+// let bankAccount = {
+//   owner: "Ubaid Ur Rahman",
+//   age: 21,
+//   balance: 50000,
+//   withdraw: function (amount) {
+//     if (this.balance >= amount) {
+//       this.balance = this.balance - amount;
+//     } else {
+//       alert("Insufficient balance!");
+//     }
+//   },
+// };
+// let deposit = +prompt(
+//   `Enter the Amount. How many amount you will want to deposit?`,
+// );
+// bankAccount.withdraw(deposit);
+// console.log(bankAccount);
+
+// let bankAccount = {
+//   password: "ubaid1234",
+//   charge: 60000,
+//   deposit: function (depos) {
+//     this.charge = this.charge + depos;
+//   },
+//   withdraw: function (draw) {
+//     this.charge = this.charge - draw;
+//   },
+// };
+// let pass = prompt(`Enter your password for accessing your account`);
+// if (bankAccount.password === pass.toLowerCase()) {
+//   let answer = prompt(`Choose the "Deposit" or "Withdraw"`);
+//   if (answer == "deposit") {
+//     let amount = +prompt(`Enter your deposited amount`);
+//     bankAccount.deposit(amount);
+//   } else if (answer == "withdraw") {
+//     let amount = +prompt("Enter your withdraw amount");
+//     bankAccount.withdraw(amount);
+//   } else {
+//     console.log("Invalid transaction!");
+//   }
+// } else {
+//   console.log("Your password is incorrect so you can't access your account");
+// }
+// console.log(bankAccount.charge);
+
+// let bankAccount = {
+//   password: "Ubaid1234",
+//   balance: 50000,
+//   withdraw: function (amount) {
+//     if (this.balance >= amount) {
+//       if (amount > 0 && amount <= this.balance) {
+//         this.balance = this.balance - amount;
+//         return true;
+//       } else {
+//         console.log("Enter a valid amount!");
+//         return false;
+//       }
+//     } else {
+//       console.log("Insufficient balance!");
+//       return false;
+//     }
+//   },
+// };
+
+// let amount = +prompt("Enter your amount for Withdraw");
+// let success = bankAccount.withdraw(amount);
+
+// if (success) {
+//   console.log(
+//     `You withdraw Rs-${amount}. Now in your account the remainning amount is ${bankAccount.balance}`,
+//   );
+// }
+
 let bankAccount = {
-  owner: "Ubaid",
-  balance: 20000,
-  deposite: function (depos) {
-    this.balance = this.balance + depos;
+  password: "ubaid1234",
+  balance: 60000,
+  withdraw: function (amount) {
+    if (amount <= this.balance) {
+      if (amount > 0 && amount <= this.balance) {
+        this.balance = this.balance - amount;
+        return true;
+      } else {
+        console.log("Enter a valid amount!");
+        return false;
+      }
+    } else {
+      console.log("Insufficient balance!");
+      return false;
+    }
   },
-  withDraw: function (draw) {
-    this.balance = this.balance - draw;
+  deposit: function (amount) {
+    if (amount > 0) {
+      this.balance = this.balance + amount;
+      return true;
+    } else {
+      console.log("Enter a valid amount!");
+      return false;
+    }
+  },
+  checkBalance: function () {
+    return this.balance;
   },
 };
-bankAccount.deposite(10000);
-console.log(`Now the amount in your account is ${bankAccount.balance}`);
-bankAccount.withDraw(5000);
-console.log(`You with draw 5000 Rs now your balance is${bankAccount.balance}`);
+let success;
+let password = prompt(`Enter your password for accessing your account`);
+if (password === bankAccount.password) {
+  let answer = prompt(`Deposit OR Withdraw`).toLowerCase();
+  if (answer == "deposit") {
+    let amount = +prompt(`Enter your ${answer}ed amount`);
+    success = bankAccount.deposit(amount);
+  } else if (answer == "withdraw") {
+    let amount = +prompt(`Enter your ${answer} amount`);
+    success = bankAccount.withdraw(amount);
+  } else {
+    console.log("Invalid Transtion!");
+  }
+
+  if (success) {
+    console.log(
+      `Your ${answer} is successfull and the balance is ${bankAccount.balance}`,
+    );
+  }
+} else {
+  console.log("Incorrect Password!");
+}
+
+let currentBalance = bankAccount.checkBalance();
+console.log(currentBalance);
